@@ -1,3 +1,5 @@
+Tracker: https://tracker.archiveteam.org
+
 links because i'm lazy:
 
 http://localhost:18000/
