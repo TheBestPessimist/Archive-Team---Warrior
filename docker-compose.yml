@@ -1,0 +1,334 @@
+# All these were manually created by me on 2025-07-05
+services:
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    restart: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: >
+      --label-enable
+      --include-restarting
+      --cleanup
+      --interval 3600
+
+  archiveteam-warrior-auto:
+    container_name: archiveteam-warrior-auto
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: auto
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18000:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-blogger:
+    container_name: archiveteam-warrior-blogger
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: blogger
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18001:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-fc2:
+    container_name: archiveteam-warrior-fc2
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: fc2
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18002:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-githubtest2:
+    container_name: archiveteam-warrior-githubtest2
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: githubtest2
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18003:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-glitch:
+    container_name: archiveteam-warrior-glitch
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: glitch
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18004:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-goo-gl:
+    container_name: archiveteam-warrior-goo-gl
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: goo-gl
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18005:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-imgur:
+    container_name: archiveteam-warrior-imgur
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: imgur
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18006:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-livestream:
+    container_name: archiveteam-warrior-livestream
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: livestream
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18007:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-mediafire:
+    container_name: archiveteam-warrior-mediafire
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: mediafire
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18008:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-metaadlibrary:
+    container_name: archiveteam-warrior-metaadlibrary
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: metaadlibrary
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18009:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-pastebin:
+    container_name: archiveteam-warrior-pastebin
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: pastebin
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18010:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-periscope:
+    container_name: archiveteam-warrior-periscope
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: periscope
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18011:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-radiofreeasia:
+    container_name: archiveteam-warrior-radiofreeasia
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: radiofreeasia
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18012:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-rferl:
+    container_name: archiveteam-warrior-rferl
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: rferl
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18013:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-telegram:
+    container_name: archiveteam-warrior-telegram
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: telegram
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18014:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-twitch:
+    container_name: archiveteam-warrior-twitch
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: twitch
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18015:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-urlteam2:
+    container_name: archiveteam-warrior-urlteam2
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: urlteam2
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18016:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-vkontakte:
+    container_name: archiveteam-warrior-vkontakte
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: vkontakte
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18017:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-voiceofamerica:
+    container_name: archiveteam-warrior-voiceofamerica
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: voiceofamerica
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18018:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+  archiveteam-warrior-youtube:
+    container_name: archiveteam-warrior-youtube
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    restart: on-failure
+    environment:
+      DOWNLOADER: TheBestPessimist
+      SELECTED_PROJECT: youtube
+      CONCURRENT_ITEMS: 6
+    ports:
+      - "18019:8001"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
